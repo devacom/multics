@@ -1,5 +1,3 @@
-DONE: Review use of PUBLIC flag and clean code of "bad" things.
-
 DONE: Review use of other flags and document it (probably in Makefile).
 
 DONE: [FIX] clustredcache.c: TYPE_RESENDREQ messages being sent only when non PUBLIC but when received are only processed when PUBLIC. This causes "Unknown message from cache peer" in debug. It has to be tested.
