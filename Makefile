@@ -179,7 +179,7 @@ $(OUTPUT)/main.o: main.c Makefile common.h httpserver.h config.h clustredcache.c
 	cli-common.c cli-cccam.c cli-newcamd.c cli-radegast.c cli-camd35.c cli-cs378x.c
 
 all:
-	$(MAKE) target=ppc-old
+	$(MAKE) target=arm-android
 	$(MAKE) target=ppc
 	$(MAKE) target=mipsel
 	$(MAKE) target=mipsel-pli4
@@ -199,7 +199,7 @@ cleanall:
 	$(MAKE) clean
 	$(MAKE) target=x64 clean
 	$(MAKE) target=x32 clean
-	$(MAKE) target=ppc-old clean
+	$(MAKE) target=arm-android clean
 	$(MAKE) target=ppc clean
 	$(MAKE) target=mipsel clean
 	$(MAKE) target=mipsel-pli4 clean
