@@ -28,10 +28,12 @@ ifeq ($(target),x64)
   CFLAGS	= -s -ggdb3 -m64 -O3 -I. -fpack-struct $(OPTS) -DEPOLL_NEWCAMD -DEPOLL_ECM
   LFLAGS	= $(CFLAGS)
 else
-ifeq ($(target),ppc-old)
-  CC        = /root/Desktop/tuxbox-cvs/root/cdk/bin/powerpc-tuxbox-linux-gnu-gcc
-  OUTPUT	= ppc-old
-  CFLAGS	= -s -ggdb3 -O2 $(OPTS) -DINOTIFY -DSTB
+ifeq ($(target),arm-android)
+  CC        = /android-toolchain/bin/arm-linux-androideabi-gcc
+  CXX       = /android-toolchain/bin/arm-linux-androideabi-g++
+  STRIP     = /android-toolchain/bin/arm-linux-androideabi-strip
+  OUTPUT	= arm-android
+  CFLAGS	= -s -ggdb3 -O2 $(OPTS) -DSTB -fPIC
   LFLAGS	= $(CFLAGS)
 else
 ifeq ($(target),ppc)
